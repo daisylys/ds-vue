@@ -1,6 +1,7 @@
 # ds-vue
 
 > npm install -g @vue/cli
+
 > npm install -g @vue/cli-service-global
 
 | 操作                 | 说明                                     |
@@ -26,3 +27,12 @@
 
 ## + src/store
 >yarn add vuex
+
+
+## + src/api
+
+
+## +src/mock (可选)
+`Mock.mock( url, post/get , 返回的数据);`
+
+> yarn add mockjs
