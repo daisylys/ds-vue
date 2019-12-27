@@ -1,29 +1,19 @@
 # ds-vue
 
-## Project setup
-```
-yarn install
-```
+npm install -g @vue/cli
+npm install -g @vue/cli-service-global
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+|                                          |                      |
+| ---------------------------------------- | -------------------- |
+|                                          | vue create [proName] |
+| Project setup                            | yarn install         |
+| Compiles and hot-reloads for development | yarn run serve       |
+| Compiles and minifies for production     | yarn run build       |
+| Run your tests                           | yarn run test        |
+| Lints and fixes files                    | yarn run lint        |
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### + vue.config.js
+|                         |                       |
+| ----------------------- | --------------------- |
+| uglifyjs-webpack-plugin | 缩小(压缩优化)js 文件 |
+| postcss-px2rem          | px 转换为 rem         |
