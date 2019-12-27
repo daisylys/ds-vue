@@ -23,3 +23,6 @@
 ## + src/router/index.js
 
 > yarn add vue-router
+
+## + src/store
+>yarn add vuex
