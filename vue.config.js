@@ -77,7 +77,7 @@ module.exports = {
           vue$: "vue/dist/vue.esm.js",
           "@": path.resolve(__dirname, "./src"),
           "@c": path.resolve(__dirname, "./src/components"),
-          "@p": path.resolve(__dirname, "./src/pages")
+          "@v": path.resolve(__dirname, "./src/views")
         } // 别名配置
       }
     });
@@ -123,12 +123,12 @@ module.exports = {
         }
       }
     },
-    before(app) {
+    // before(app) {
       // http://localhost:8081/test
     //   app.get("/test", (req, res) => {
     //     res.json(test);
     //   });
-    }
+    // }
     // 第三方插件配置
     // pluginOptions: {}
   }
