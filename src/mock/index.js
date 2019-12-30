@@ -5,7 +5,7 @@ const Random = Mock.Random;
 // mock一组数据
 const songListData = function() {
   let songList = [];
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 6; i++) {
     let newObject = {
       title: Random.csentence(5, 30), //  Random.csentence( min, max )
       thumbnail_pic_s: Random.dataImage("300x250", "mock的图片"), // Random.dataImage( size, text ) 生成一段随机的 Base64 图片编码

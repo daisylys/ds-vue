@@ -1,7 +1,7 @@
 import { fetch } from "../fetch";
 
 const music = {
-  JH_news(data) {
+  get_songList(data) {
     return fetch({
       url: "/songs/index",
       method: "post",
