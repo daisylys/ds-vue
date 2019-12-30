@@ -44,7 +44,7 @@ export default {
                 islogin: true,
                 Authorization: _this.userToken
               });
-              // _this.$router.push("/goods");
+              _this.$router.push("/my");
               alert("登陆成功");
             } else {
               alert("账号或密码错误1");

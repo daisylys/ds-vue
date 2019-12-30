@@ -9,7 +9,7 @@
       <!-- 使用 router-link 组件来导航. 通过传入 `to` 属性指定链接. -->
       <router-link tag="li" to="/music">音乐</router-link>
       <router-link tag="li" to="/foo">Foo</router-link>
-      <router-link tag="li" to="/bar">Bar</router-link>
+      <router-link tag="li" to="/my">My</router-link>
     </ul>
     <!-- 路由出口:路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
