@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <div v-if="!user.islogin">登录</div>
+    <div v-if="user.islogin">
+      欢迎你:{{user.username}}|
+      <span @click="logouthandle">退出</span>
+    </div>
     <ul class="navbar">
       <!-- 使用 router-link 组件来导航. 通过传入 `to` 属性指定链接. -->
       <router-link tag="li" to="/music">音乐</router-link>
@@ -12,8 +17,31 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex";
 export default {
-  name: "app"
+  name: "app",
+  computed: {
+    ...mapState(["user"])
+  },
+  methods: {
+    loginhandle: function() {
+      let token = localStorage.getItem("Authorization");
+      if (token !== null) {
+        alert("已经登录了");
+      } else {
+        this.$router.push({ path: "/login" }).catch(err => {
+          err;
+        });
+      }
+    },
+    logouthandle: function() {
+      this.changeLogout();
+      this.$router.push({ path: "/login" }).catch(err => {
+        err;
+      });
+    },
+    ...mapMutations(["changeLogout"])
+  }
 };
 </script>
 
