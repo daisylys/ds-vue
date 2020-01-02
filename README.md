@@ -25,14 +25,18 @@
 
 > yarn add vue-router
 
-## + src/store
->yarn add vuex
+- 路由守卫：使用 router.beforeEach 注册一个全局前置守卫，判断用户是否登陆;不同路由不同页面标题，设置afterEach钩子函数
 
+-多级路由
+
+## + src/store
+
+> yarn add vuex
 
 ## + src/api
 
-
 ## +src/mock (可选)
+
 `Mock.mock( url, post/get , 返回的数据);`
 
 > yarn add mockjs

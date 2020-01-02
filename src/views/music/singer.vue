@@ -1,31 +1,28 @@
 <template>
   <div>
-    music
     <div class="main-box">
       <div class="music-box left">
-       <music-list :songListData="music.songList"></music-list>
+       <singer-list :songListData="music.singerList"></singer-list>
       </div>
-      <div class="music-box"></div>
-       <div class="music-box"></div>
     </div>
   </div>
 </template>
 <script>
 import { mapState, mapActions } from "vuex";
-import musicList from "@c/musicList.vue"
+import singerList from "@c/singerList.vue"
 export default {
-  name: "music",
+  name: "singer",
   components:{
-    "music-list":musicList
+    "singer-list":singerList
   },
   created() {
-    this.getSongListAction();
+    this.getSingerListAction();
   },
   computed: {
     ...mapState(["music"])
   },
   methods: {
-    ...mapActions(["getSongListAction"])
+    ...mapActions(["getSingerListAction"])
   }
 };
 </script>

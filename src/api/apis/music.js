@@ -7,6 +7,13 @@ const music = {
       method: "post",
       data
     });
+  },
+  get_singerList(data) {
+    return fetch({
+      url: "/songs/singer",
+      method: "post",
+      data
+    });
   }
 };
 export default music;

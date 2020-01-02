@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div v-if="!user.islogin">登录</div>
+    <div v-if="!user.islogin" @click="loginhandle">登录</div>
     <div v-if="user.islogin">
       欢迎你:{{user.username}}|
       <span @click="logouthandle">退出</span>

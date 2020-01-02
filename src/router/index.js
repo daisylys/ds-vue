@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 // 1.定义/导入（路由）组件
-import music from "@v/music.vue";
+import music from "@v/music/index.vue";
+import singer from "@v/music/singer.vue";
 import login from "@v/login.vue";
 import my from "@v/my.vue";
 Vue.use(Router);
@@ -10,7 +11,12 @@ const router = new Router({
   routes: [
     { path: "/", redirect: { name: "music" } },
     { path: "/login", name: "login", component: login },
-    { path: "/music", name: "music", component: music },
+    {
+      path: "/music",
+      name: "music",
+      component: music,
+      children: [{ path: "singer", name: "singer", component: singer }]
+    },
     {
       path: "/my",
       name: "my",
@@ -37,7 +43,7 @@ router.beforeEach((to, from, next) => {
 });
 // 不同路由不同页面标题，设置afterEach钩子函数
 
-router.afterEach((to) => {
+router.afterEach(to => {
   document.title = to.name;
 });
 export default router;

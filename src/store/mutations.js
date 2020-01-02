@@ -20,6 +20,9 @@ const mutations = {
   [types.GET_SONGLIST](state, payload) {
     state.music.songList = payload;
   },
+  [types.GET_SINGERLIST](state, payload) {
+    state.music.singerList = payload;
+  },
   
 };
 export default mutations;

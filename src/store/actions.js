@@ -9,6 +9,12 @@ const actions = {
         console.log("aciton_songlist", res.data.songList);
         context.commit(types.GET_SONGLIST,res.data.songList);
       });
+  },
+  getSingerListAction(context) {
+    music.get_singerList("type=top&key=123456").then(res => {
+        console.log("aciton_singerlist", res.data.singerList);
+        context.commit(types.GET_SINGERLIST,res.data.singerList);
+      });
   }
 };
 export default actions;

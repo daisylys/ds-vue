@@ -12,7 +12,8 @@ const state = {
       : ""
   },
   music: {
-    songList: []
+    songList: [],
+    singerList:[]
   }
 };
 export default state;
