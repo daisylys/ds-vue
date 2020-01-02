@@ -14,6 +14,11 @@ new Vue({
   render: h => h(App)
 }).$mount("#app");
 
-Vue.filter("getYMD", function(input) {
-  return input.split(" ")[0];
-});
+// Vue.filter("getYMD", function(input) {
+//   return input.split(" ")[0];
+// });
+import myPlugin from "@/plugin/myPlugin"
+Vue.use(myPlugin)
+
+import Toast from '@/plugin/toast/toast.js'
+Vue.use(Toast)
